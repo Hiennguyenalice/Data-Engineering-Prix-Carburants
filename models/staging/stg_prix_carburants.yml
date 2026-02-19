@@ -1,0 +1,11 @@
+models:
+  - name: stg_prix_carburants
+    description: "Table de staging nettoyée des prix des carburants."
+    columns:
+      - name: PRIX_LITRE
+        description: "Prix au litre en euros."
+        tests:
+          - not_null  # Ce test va maintenant réussir car tu as filtré dans le SQL !
+      - name: NOM_CARBURANT
+        tests:
+          - not_null

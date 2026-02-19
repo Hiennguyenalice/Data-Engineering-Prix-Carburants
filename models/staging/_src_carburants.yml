@@ -1,0 +1,16 @@
+
+
+sources:
+  - name: source_prix_carburants # C'est le nom que tu utiliseras dans tes requêtes dbt
+    database: PRIX_CARBURANT # Le nom exact de ta DB dans Snowflake
+    schema: PUBLIC # Le schéma où sont tes tables
+    description: "Données brutes des prix des carburants en France (Open Data)"
+    tables:
+      - name: RAW_PRIX_FULL
+        description: "Table principale contenant tous les relevés de prix"
+        #columns:
+          #- name: C12 # La colonne du prix
+            #tests:
+              #- not_null # Vérifie qu'il n'y a pas de prix manquant
+      - name: RAW_CARBURANT_TEMP
+        description: "Table temporaire de travail"
