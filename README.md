@@ -34,47 +34,7 @@ Pour ce projet, j'ai mis en place des mécanismes de défense :
 8. Dans dbt, créer la modèle SQL (stg_prix_carburants.sql) pour: nettoyer les données (renommer les colonnes, convertir les types des données, gérer les types de date) pour que tous les données soient prets à utiliser
 9. Dans dbt, créer  une table finale (fct_prix_moyens_par_region.sql) qui calcule, le prix moyen du Gazole par département ou par ville.
 
-**Voici quelques captures d'écran de la construction du projet ainsi que le contenu các fichiers utilisés.**
-
-**Fichier dbt_project_.yml**
-
-name: 'projet_carburants'
-version: '1.0.0'
-config-version: 2
-# Ce nom doit correspondre au nom de la connexion que tu as configurée dans dbt Cloud
-profile: 'default' 
-# Dossiers où dbt va chercher tes fichiers
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-clean-targets:
-  - "target"
-  - "dbt_packages"
-# Configuration des modèles
-models:
-  projet_carburants:
-    # Ici, on dit à dbt de créer des "tables" par défaut dans Snowflake
-    # Tu pourras changer cela en "view" plus tard si besoin
-    +materialized: table
-    
-    # On prépare déjà la structure de tes dossiers futurs
-    staging:
-      +schema: staging
-    marts:
-      +schema: analytics
-
-**Fichier _src_carburants.yml**
-
-version: 2
-sources:
-  - name: source_prix_carburants
-    database: PRIX_CARBURANT
-    schema: PUBLIC
-    tables:
-      - name: RAW_PRIX_FULL
+**Voici quelques captures d'écran de la construction du projet**
 
 **Snowflake settings**
 
