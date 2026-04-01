@@ -65,7 +65,9 @@ Pour ce projet, j'ai mis en place des mécanismes de défense :
 **DBT setting**
 
 <img width="2378" height="1076" alt="image" src="https://github.com/user-attachments/assets/619694c4-ea74-477d-b21b-dd278e3386a9" />
-**Le succès des Tests **
+
+**Le succès des Tests**
+
 <img width="1085" height="753" alt="image" src="https://github.com/user-attachments/assets/4559c194-89de-40cf-b945-fdf1510b7b36" />
 
 **Le résultat sur Snowflake**
